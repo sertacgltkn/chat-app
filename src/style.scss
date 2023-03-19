@@ -15,30 +15,58 @@
 }
 
 .formContainer {
-  background-color: #a7bcff;
+  background: #f12711;
+  background: -webkit-linear-gradient(to left, #f5af19, #f12711);
+  background: linear-gradient(to left, #f5af19, #f12711);
+
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 
   .formWrapper {
-    background-color: white;
     padding: 20px 60px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
+    animation: formWrapperAnim 1s ease-in-out forwards;
+
+    @keyframes formWrapperAnim {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
     .logo {
-      color: #91db08;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      color: white;
       font-weight: bold;
-      font-size: 24px;
+      font-size: 34px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
     }
 
     .title {
-      color: #5d5b8d;
-      font-size: 12px;
+      color: white;
+      font-size: 14px;
     }
 
     form {
@@ -79,7 +107,7 @@
       }
     }
     p {
-      color: #5d5b8d;
+      color: white;
       font-size: 12px;
       margin-top: 10px;
     }
@@ -87,14 +115,17 @@
 }
 
 .home {
-  background-color: #a7bcff;
+  background: #f12711;
+  background: -webkit-linear-gradient(to left, #f5af19, #f12711);
+  background: linear-gradient(to left, #f5af19, #f12711);
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 
   .container {
-    border: 1px solid white;
+    box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.3);
+
     border-radius: 10px;
     width: 65%;
     height: 80%;
@@ -106,13 +137,26 @@
 
     .sidebar {
       flex: 1;
-      background-color: #3e3c61;
+      background: #f12711;
+      background: -webkit-linear-gradient(to left, #f5af19, #f12711);
+      background: linear-gradient(to left, #f5af19, #f12711);
       position: relative;
 
       .navbar {
         display: flex;
         align-items: center;
-        background-color: #2f2d52;
+        background: #f5af19; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to bottom,
+          #f12711,
+          #f5af19
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to bottom,
+          #f12711,
+          #f5af19
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
         height: 50px;
         padding: 10px;
         justify-content: space-between;
@@ -152,12 +196,33 @@
       }
       .search {
         border-bottom: 1px solid gray;
+        background: #f12711; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to bottom,
+          #f5af19,
+          #f12711
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to bottom,
+          #f5af19,
+          #f12711
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
         .searchForm {
           padding: 10px;
 
           input {
-            background-color: transparent;
+            background: #f12711; /* fallback for old browsers */
+            background: -webkit-linear-gradient(
+              to bottom,
+              #f5af19,
+              #f12711
+            ); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(
+              to bottom,
+              #f5af19,
+              #f12711
+            ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             border: none;
             color: white;
             outline: none;
@@ -205,7 +270,17 @@
 
       .chatInfo {
         height: 50px;
-        background-color: #5d5b8d;
+        background: #f5af19; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to bottom,
+          #f12711,
+          #f5af19
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to bottom,
+          #f12711,
+          #f5af19
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -224,10 +299,11 @@
       }
 
       .messages {
-        background-color: #ddddf7;
+        background: white;
+ 
         padding: 10px;
         height: calc(100% - 160px);
-        overflow: scroll;
+        overflow: hidden;
 
         .message {
           display: flex;

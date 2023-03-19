@@ -6,8 +6,17 @@ function Footer() {
     window.location.href = "https://www.linkedin.com/in/sertacgultekin/";
   };
   return (
-    <div style={{ backgroundColor: "#a7bcff" }}>
-      <footer style={{ borderLeft: "none", borderRight: "none" }}>
+    <div>
+      <footer
+        style={{
+          borderLeft: "none",
+          borderRight: "none",
+          background:
+            "-webkit-linear-gradient(to left, #f5af19, #f12711)" /* Chrome 10-25, Safari 5.1-6 */,
+          background:
+            "linear-gradient(to left, #f5af19, #f12711)" /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */,
+        }}
+      >
         <p style={{ textDecoration: "none", color: "#fff" }}>
           &copy; {currentYear} All rights reserved -{" "}
           <a
