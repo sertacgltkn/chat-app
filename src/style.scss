@@ -85,12 +85,22 @@
       }
 
       button {
-        background-color: #7b96ec;
+        background-color: #eef603;
         color: white;
         padding: 10px;
         font-weight: bold;
         border: none;
         cursor: pointer;
+        transition: all 0.9s ease-in-out;
+      }
+      
+      button:hover {
+        background-color: #c2cb1f;
+      }
+      
+      button:active {
+        background-color: #9da153;
+        transform: scale(0.95);
       }
 
       label {
