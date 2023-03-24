@@ -5,7 +5,7 @@ This project uses the following technologies:
 * Firebase
 * Yarn
 
-### Installation
+### Installation  ( Firebase key required )
 To run this project on your local machine, follow these steps:
 
 1. Clone the repository:
